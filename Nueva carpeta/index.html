@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Inscripción</title>
+    <style>
+        /* General */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #cffdcf;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        form {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            width: 100%;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+
+        input[type="radio"], input[type="checkbox"] {
+            width: auto;
+            margin-right: 10px;
+        }
+
+        button {
+            width: 100%;
+            background-color: #34fd34;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #27782e;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        /* Títulos de sección */
+        h2 {
+            margin-top: 20px;
+            margin-bottom: 10px;
+            color: #444;
+            font-size: 18px;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <h1>Formulario de Inscripción</h1>
+
+        <label for="carrera">¿En qué carrera desea inscribirse?</label>
+        <select id="carrera" name="carrera" required>
+            <option value="administracion">Administración de Empresas</option>
+            <option value="bacteriologia">Bacteriología</option>
+            <option value="contaduria">Contaduría Pública</option>
+            <option value="derecho">Derecho</option>
+            <option value="enfermeria">Enfermería</option>
+            <option value="sistemas">Ingeniería de Sistemas</option>
+            <option value="quirurgica">Instrumentación Quirúrgica</option>
+            <option value="educacion">Licenciatura en Educación Infantil</option>
+            <option value="medicina">Medicina</option>
+            <option value="odontologia">Odontología</option>
+            <option value="prehospitalaria">Tecnología en Atención Prehospitalaria</option>
+            <option value="estetica">Tecnología en Estética y Cosmetología</option>
+            <option value="mecanica">Tecnología en Mecánica Dental</option>
+            <option value="social">Trabajo Social</option>
+        </select>
+
+        <h2>Información Personal</h2>
+        <label for="primer_nombre">Primer nombre:</label>
+        <input type="text" id="primer_nombre" name="primer_nombre" required>
+
+        <label for="segundo_nombre">Segundo nombre:</label>
+        <input type="text" id="segundo_nombre" name="segundo_nombre">
+
+        <label for="primer_apellido">Primer apellido:</label>
+        <input type="text" id="primer_apellido" name="primer_apellido" required>
+
+        <label for="segundo_apellido">Segundo apellido:</label>
+        <input type="text" id="segundo_apellido" name="segundo_apellido">
+
+        <label for="fecha_nacimiento">Fecha de nacimiento:</label>
+        <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required>
+
+        <label for="documento">Número del documento:</label>
+        <input type="text" id="documento" name="documento" required>
+
+        <label for="sexo">Sexo biológico:</label>
+        <select id="sexo" name="sexo" required>
+            <option value="masculino">Masculino</option>
+            <option value="femenino">Femenino</option>
+        </select>
+
+        <label for="correo">Correo electrónico:</label>
+        <input type="email" id="correo" name="correo" required>
+
+        <label for="direccion">Dirección residencial:</label>
+        <textarea id="direccion" name="direccion" rows="3"></textarea>
+
+        <h2>Encuesta Personal</h2>
+        <label>¿Tiene usted hijos?</label>
+        <input type="radio" id="ninguno" name="hijos" value="ninguno" checked>
+        <label for="ninguno">No tengo</label><br>
+        <input type="radio" id="1hijo" name="hijos" value="1">
+        <label for="1hijo">1 hijo</label><br>
+        <input type="radio" id="2hijos" name="hijos" value="2">
+        <label for="2hijos">2 hijos</label><br>
+        <input type="radio" id="3hijos" name="hijos" value="3">
+        <label for="3hijos">3 hijos</label><br>
+        <input type="radio" id="mas4" name="hijos" value="4+">
+        <label for="mas4">Más de 4 hijos</label><br>
+
+        <label>¿Se reconoce como parte de alguna de las siguientes poblaciones?</label><br>
+        <input type="checkbox" id="ninguna" name="poblacion" value="ninguna">
+        <label for="ninguna">Ninguna</label><br>
+        <input type="checkbox" id="indigenas" name="poblacion" value="indigenas">
+        <label for="indigenas">Indígenas</label><br>
+        <input type="checkbox" id="afro" name="poblacion" value="afrocolombianos">
+        <label for="afro">Afrocolombianos</label><br>
+        <input type="checkbox" id="raizales" name="poblacion" value="raizales">
+        <label for="raizales">Raizales</label><br>
+        <input type="checkbox" id="rom" name="poblacion" value="rom">
+        <label for="rom">Pueblo ROM o Gitano</label><br>
+
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>
